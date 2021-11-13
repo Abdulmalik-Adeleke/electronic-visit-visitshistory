@@ -57,7 +57,7 @@ namespace VisitsHistory
                 IEnumerable<Name>? result = connection.Query<Name>("select a.first_name as FirstName , a.last_name as LastName from actor a where a.actor_id = 300 union select s.first_name as FirstName , s.last_name as LastName from staff s where s.staff_id = 20");
                 if (result is null)
                 {
-                    Console.WriteLine("database returned 0 rows");
+                    Console.WriteLine("database returned 0 rows!");
                 }
 
                 foreach (var item in result)
